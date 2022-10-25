@@ -1,0 +1,34 @@
+/*党群建设*/
+.title{
+    font-size: 22pt;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 44px;
+    color: #343434;
+
+
+}
+.title::after{
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 27px;
+    height: 2px;
+    width: 86px;
+    background: #13387c;
+}
+.about-us p{
+
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 1px
+}
+.about-us{
+    margin-top: 27px;
+
+}
+
+.footer{
+    position: relative;
+    top: 1000px;
+}

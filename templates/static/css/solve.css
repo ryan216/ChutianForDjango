@@ -1,0 +1,62 @@
+/*页头图片*/
+.banner{
+    width: 1920px;
+}
+/*图片结束*/
+/*案例列表*/
+
+.bus-container{
+    padding-top: 18px;
+}
+.bus-container .introduction{
+    margin: 0 8px;
+    line-height: 30px;
+}
+.bus-container .bus-img{
+    width: 1200px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #efefef;
+    display: inline-block;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.bus-container .bus-img img{
+    width: 1200px;
+    height: 350px;
+    align-items: center;
+}
+/* .bus-list .bus-container .bus-img .subtitle:hover{
+    color: #13387c;
+    transition: 0.5s;
+    transform: scale(1.13) translate(10px);
+
+} */
+.title{
+    font-size: 22pt;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 44px;
+    color: #343434;
+}
+/*关于我们*/
+.about-us p{
+    line-height: 50px;
+    line-height: 32px;
+    letter-spacing: 1px
+}
+.about-us{
+    margin-top: 27px;
+}
+.solve-img{
+    width: 300px;
+    height: 100px;
+    margin-left: 12px;
+    margin-top: 8px;
+    position: relative;
+}
+#selection{
+    margin-bottom: 20px;
+}
+/*案例列表结束*/

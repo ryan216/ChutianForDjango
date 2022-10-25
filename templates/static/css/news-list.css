@@ -1,0 +1,115 @@
+/*页头图片*/
+.banner{
+    width: 1920px;
+}
+/*图片结束*/
+/*新闻列表*/
+
+.news-list li{
+    display: inline;
+    text-align: center;
+    height: 51px;
+    float: left;
+    overflow: hidden;
+    line-height: 50px;
+    width: 400px;
+    background: #efefef;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #13387c;
+    color: #13387c;
+}
+.news-list .one{
+    border-right: none;
+}
+.news-list .two{
+    border-right: none;
+}
+.news-list li:hover{
+    background: #13387c;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.news-list .bar{
+    margin-bottom: 21px;
+    margin-top: 39px;
+}
+.news-list .list .news-page{
+    padding-top: 18px;
+    box-sizing: border-box;
+    border-bottom: 1px solid;
+    border-color: #efefef;
+    padding-bottom: 18px;
+}
+.news-list .list .news-page:hover .date{
+     color: #13387c;
+}
+.news-list .list .news-page:hover .arrow{
+    color: #13387c;
+}
+.news-list .list .news-page:hover .main .news-title{
+    color: #13387c;
+}
+.news-list .list .left{
+    width: 197px;
+    height: 123px;
+    float: left;
+    margin-right: 40px;
+}
+.news-list .list .left img{
+    width: 197px;
+    height: 123px;
+    display: block;
+}
+.news-list .list .right{
+    float: right;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.news-list .list .right .date{
+    float: left;
+    color: #343434;
+    font-size: 24pt;
+    font-weight: bold;
+}
+/* .news-list .list .right .date:hover{
+    color: #13387c;
+} */
+.news-list .list .right .year{
+    font-size: 15pt;
+    font-weight: bold;
+    color: #575757;
+    margin-top: 5px;
+}
+
+.news-list .list .right .arrow{
+    float: right;
+    color: #343434;
+    height: 57px;
+    font-size: 52px;
+    font-weight: bold;
+    transform: scale(0.5,1.5);
+}
+
+/* .news-list .list .right .arrow:hover{
+    color: #13387c;
+} */
+
+.news-list .list .main h4{
+    font-size: 15pt;
+    font-weight: bold;
+    color: #343434;
+    padding-top: 15px;
+    
+}
+/* .news-list .list .main h4:hover{
+    color: #13387c;
+} */
+.news-list .list .main p{
+    font-size: 12pt;
+    color: #575757;
+    line-height: 32px;
+    margin-top: 9px;
+}
+/*新闻列表结束*/

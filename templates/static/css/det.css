@@ -1,0 +1,73 @@
+/*页头图片*/
+.banner{
+    width: 1920px;
+    font-size: 0;
+    box-sizing: border-box;
+    height: 329px;
+}
+.banner .img{
+    box-sizing: border-box;
+    bottom: 0;
+    height: 329px;
+}
+.banner .img img{
+    vertical-align: top;
+}
+
+/*图片结束*/
+/*文章开始*/
+.nb li{
+    display: block;
+    text-align: center;
+    height: 51px;
+    float: left;
+    overflow: hidden;
+    line-height: 50px;
+    width: 400px;
+    background: #efefef;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #13387c;
+    color: #13387c;
+}
+.nb .sp{
+    border-left: 0;
+    border-right: 0;
+}
+.nb li:hover{
+    background: #13387c;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.nb .bar{
+    margin-top: 39px;
+}
+.nb .article .title{
+    margin-top: 39px;
+    text-align: center;
+    padding-bottom: 22px;
+    box-sizing: border-box;
+    border-bottom: 1px dashed;
+    border-color: #efefef;
+    margin-bottom: 22px;
+}
+.nb .article .title h1{
+    font-size: 18pt;
+    color: #13387c;
+    font-weight: bold;
+    border-top: 39px;
+    margin-bottom: 9px;
+}
+.nb .article img{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.nb .article p{
+    font-size: 12pt;
+    line-height: 32px;
+    color: #575757;
+}
+.nb .article{
+    margin-bottom: 39px;
+}
+/*文章结束*/
