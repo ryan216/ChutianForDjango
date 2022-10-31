@@ -26,6 +26,10 @@
     color: #ffffff;
     transition: 0.5s;
 }
+.bus-list .activity{
+	background: #13387c;
+	color: #ffffff;
+}
 .bus-list .bar{
     margin-bottom: 21px;
     margin-top: 39px;
@@ -38,14 +42,14 @@
     line-height: 30px;
 }
 .bus-list .bus-container .bus-img{
-    width: 260px;
+    width: 232px;
     height: 275px;
     box-sizing: border-box;
     border: 1px solid;
     border-color: #efefef;
     display: inline-block;
-    margin-bottom: 30px;
-    margin-right: 36px;
+    margin-bottom: 10px;
+    margin-right: 5px;
 }
 .bus-list .bus-container .five{
     margin-right: 0;
@@ -59,9 +63,9 @@
     transform: scale(1.13) translate(10px);
 }
 .bus-list .bus-container .bus-img img{
-    width: 230px;
+    width: 216px;
     height: 135px;
-    margin-left: 12px;
+    margin-left: 8px;
     margin-top: 8px;
 }
 .bus-list .bus-container .bus-img .subtitle{
@@ -83,44 +87,5 @@
 .bus-list .bus-container .bus-img .learn-more{
     font-size: 12pt;
     color: #13387c;
-}
-.list-group{
-    padding-left: 0;
-    margin-bottom: 20px;
-}
-.list-group span{
-    float: right;
-}
-.list-group-item{
-    height: 30px;
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    margin-bottom: -1px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    list-style-type: none;
-}
-.list-group-item-action:hover{
-    z-index: 2;
-    color: #fff;
-    background-color: #337ab7;
-    border-color: #337ab7;
-}
-.title{
-    font-size: 22pt;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 44px;
-    color: #343434;
-}
-/*关于我们*/
-.about-us p{
-    line-height: 50px;
-    line-height: 32px;
-    letter-spacing: 1px
-}
-.about-us{
-    margin-top: 27px;
 }
 /*案例列表结束*/

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from index.models import page1
+from index.models import page1, news
 
 
 # Register your models here.
@@ -22,3 +22,4 @@ class myAdmin(admin.ModelAdmin):
 
 # admin.site.register(page1, myAdmin)
 admin.site.register(page1)
+admin.site.register(news)

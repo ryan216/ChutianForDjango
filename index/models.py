@@ -26,5 +26,18 @@ class page1(models.Model):
 
 
 
+class news(models.Model):
+    title = models.CharField(max_length=100,default='',null=True,blank=True)
+    header = models.CharField(max_length=100,default='',null=True,blank=True)
+
+    type = models.CharField(max_length=100,default='',null=True,blank=True)
+
+
+
+    content = models.TextField(default='',null=True,blank=True)
+    time = models.DateTimeField(auto_now_add=True)
+
+
+
 
 
