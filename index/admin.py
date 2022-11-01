@@ -1,7 +1,8 @@
+import solve as solve
 from django.contrib import admin
 
 
-from index.models import page1
+from index.models import page1, about, service, pm_con
 from index.models import news
 
 
@@ -25,3 +26,7 @@ class myAdmin(admin.ModelAdmin):
 # admin.site.register(page1, myAdmin)
 admin.site.register(page1)
 admin.site.register(news)
+admin.site.register(about)
+admin.site.register(service)
+admin.site.register(pm_con)
+
