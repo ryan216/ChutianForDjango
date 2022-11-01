@@ -42,6 +42,19 @@ class about(models.Model):
     nums_3 = models.CharField(max_length=100,default='', null=True, blank=True)
     nums_4 = models.CharField(max_length=100,default='', null=True, blank=True)
 
+    d1_name= models.CharField(max_length=100,default='', null=True, blank=True)
+    d2_name= models.CharField(max_length=100,default='', null=True, blank=True)
+    d3_name= models.CharField(max_length=100,default='', null=True, blank=True)
+    d4_name= models.CharField(max_length=100,default='', null=True, blank=True)
+
+    d1_content= models.TextField(default='',null=True,blank=True)
+    d2_content= models.TextField(default='',null=True,blank=True)
+    d3_content= models.TextField(default='',null=True,blank=True)
+    d4_content= models.TextField(default='',null=True,blank=True)
+
+
+
+
 
 class department(models.Model):
     name= models.CharField(max_length=100,default='', null=True, blank=True)

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from index.models import news, page1, about, service
+from index.models import news, page1, about, service, pm_con
 
 
 def index(request):
@@ -22,13 +22,13 @@ def get_index(request):
 
 def get_about(request):
     about_res = about.objects.all()
-    dic = {"page_index": about_res}
+    dic = {"about": about_res}
     return render(request, 'web/about_us.html', dic)
 
 
 def get_service(request):
     service_res = service.objects.all()
-    dic = {"page_index": service_res}
+    dic = {"service": service_res}
     return render(request, 'web/service.html', dic)
 
 
@@ -37,4 +37,6 @@ def get_solve(request):
     return render(request, 'web/solve.html', {})
 
 def get_pmcon(request):
-    return render(request, 'web/pm_con.html', {})
+    con_res = pm_con.objects.all()
+    dic = {"service": con_res}
+    return render(request, 'web/pm_con.html', dic)
