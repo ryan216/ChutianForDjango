@@ -30,6 +30,10 @@
     color: #ffffff;
     transition: 0.5s;
 }
+.news-list .activity{
+	background: #13387c;
+	color: #ffffff;
+}
 .news-list .bar{
     margin-bottom: 21px;
     margin-top: 39px;

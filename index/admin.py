@@ -1,5 +1,6 @@
 from django.contrib import admin
 
+
 from index.models import page1
 from index.models import news
 

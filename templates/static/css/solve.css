@@ -4,28 +4,75 @@
 }
 /*图片结束*/
 /*案例列表*/
-
-.bus-container{
+.bus-list li{
+    display: inline;
+    text-align: center;
+    height: 51px;
+    float: left;
+    overflow: hidden;
+    line-height: 50px;
+    width: 600px;
+    background: #efefef;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #13387c;
+    color: #13387c;
+}
+.bus-list .sp{
+    border-right: none;
+}
+.bus-list li:hover{
+    background: #13387c;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.bus-list .activity{
+	background: #13387c;
+	color: #ffffff;
+}
+.bus-list .bar{
+    margin-bottom: 21px;
+    margin-top: 39px;
+}
+.bus-list .bus-container{
     padding-top: 18px;
 }
-.bus-container .introduction{
+.bus-list .bus-container .introduction{
     margin: 0 8px;
     line-height: 30px;
 }
-.bus-container .bus-img{
-    width: 1200px;
-    height: 300px;
+.bus-list .bus-container .bus-img{
+    width: 232px;
+    height: 275px;
     box-sizing: border-box;
     border: 1px solid;
     border-color: #efefef;
     display: inline-block;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 5px;
 }
-.bus-container .bus-img img{
-    width: 1200px;
-    height: 350px;
-    align-items: center;
+.bus-list .bus-container .five{
+    margin-right: 0;
+}
+.bus-list .bus-container  .bottom{
+    margin-bottom: 0;
+}
+.bus-list .bus-container .bus-img:hover .subtitle{
+    color: #13387c;
+    transition: 0.5s;
+    transform: scale(1.13) translate(10px);
+}
+.bus-list .bus-container .bus-img img{
+    width: 216px;
+    height: 135px;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+.bus-list .bus-container .bus-img .subtitle{
+    font-size: 14pt;
+    font-weight: bold;
+    color: #343434;
+    transition: 0.5s transform
 }
 /* .bus-list .bus-container .bus-img .subtitle:hover{
     color: #13387c;
@@ -33,30 +80,12 @@
     transform: scale(1.13) translate(10px);
 
 } */
-.title{
-    font-size: 22pt;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 44px;
-    color: #343434;
+.bus-list .bus-container .bus-img .text{
+    font-size: 12pt;
+    color: #575757;
 }
-/*关于我们*/
-.about-us p{
-    line-height: 50px;
-    line-height: 32px;
-    letter-spacing: 1px
-}
-.about-us{
-    margin-top: 27px;
-}
-.solve-img{
-    width: 300px;
-    height: 100px;
-    margin-left: 12px;
-    margin-top: 8px;
-    position: relative;
-}
-#selection{
-    margin-bottom: 20px;
+.bus-list .bus-container .bus-img .learn-more{
+    font-size: 12pt;
+    color: #13387c;
 }
 /*案例列表结束*/

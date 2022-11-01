@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 from django.db import models
 
-
 class page1(models.Model):
     about = models.TextField(default='', null=True, blank=True)
     nums_1 = models.CharField(max_length=100,default='', null=True, blank=True)
@@ -24,8 +23,19 @@ class page1(models.Model):
     work3 = models.TextField(default='', null=True, blank=True)
 
 
+
 class news(models.Model):
-    title = models.CharField(max_length=100, default='', null=True, blank=True)
-    content = models.TextField(default='', null=True, blank=True)
-    create_time = models.DateTimeField(auto_now_add=True)
-    change_time = models.DateTimeField()
+    title = models.CharField(max_length=100,default='',null=True,blank=True)
+    header = models.CharField(max_length=100,default='',null=True,blank=True)
+
+    type = models.CharField(max_length=100,default='',null=True,blank=True)
+
+    content = models.TextField(default='',null=True,blank=True)
+    time = models.DateTimeField(auto_now_add=True)
+
+
+
+
+
+
+
