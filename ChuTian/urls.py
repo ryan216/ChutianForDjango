@@ -22,6 +22,6 @@ from ChuTian import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'', views.hello),
-    path(r'index/',include("index.urls"),name="index"),
+    # path(r'', views.hello),
+    path(r'',include("index.urls"),name="index"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
