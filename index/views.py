@@ -8,6 +8,12 @@ def index(request):
     return render(request, 'index/index.html', {})
 
 def get_news(request):
+    if request.GET:
+        type= request.GET['type']
+        news_res= news.objects.get(type=type)
+        dic = {"new": news_res}
+        return render(request, 'web/detail.html', dic)
+
     news_res = news.objects.all()
     dic = {"news": news_res}
     return render(request, 'web/new-list.html', dic)
@@ -27,8 +33,14 @@ def get_about(request):
 
 
 def get_service(request):
+    if request.GET:
+        type= request.GET['type']
+        service_res= news.objects.get(type=type)
+        dic = {"service": service_res}
+        return render(request, 'web/service_detail.html', dic)
+
     service_res = service.objects.all()
-    dic = {"service": service_res}
+    dic = {"services": service_res}
     return render(request, 'web/service.html', dic)
 
 
@@ -38,5 +50,5 @@ def get_solve(request):
 
 def get_pmcon(request):
     con_res = pm_con.objects.all()
-    dic = {"service": con_res}
+    dic = {"con": con_res}
     return render(request, 'web/pm_con.html', dic)
