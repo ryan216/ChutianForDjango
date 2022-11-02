@@ -9,8 +9,8 @@ def index(request):
 
 def get_news(request):
     if request.GET:
-        type= request.GET['type']
-        news_res= news.objects.get(type=type)
+        pk= request.GET['pk']
+        news_res= news.objects.get(pk=pk)
         dic = {"new": news_res}
         return render(request, 'web/detail.html', dic)
 
@@ -34,8 +34,8 @@ def get_about(request):
 
 def get_service(request):
     if request.GET:
-        type= request.GET['type']
-        service_res= news.objects.get(type=type)
+        pk= request.GET['pk']
+        service_res= news.objects.get(pk=pk)
         dic = {"service": service_res}
         return render(request, 'web/service_detail.html', dic)
 
