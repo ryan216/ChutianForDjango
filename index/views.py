@@ -21,7 +21,9 @@ def get_news(request):
 
 def get_index(request):
     page1_res = page1.objects.all()
-    dic = {"page_index": page1_res}
+    service_res = service.objects.all()
+    dic = {"services": service_res,"page_index": page1_res}
+
     return render(request, 'web/index.html', dic)
 
 
