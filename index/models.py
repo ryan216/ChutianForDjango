@@ -10,10 +10,6 @@ class page1(models.Model):
     nums_3 = models.CharField(max_length=100,default='', null=True, blank=True)
     nums_4 = models.CharField(max_length=100,default='', null=True, blank=True)
 
-    service1 = models.TextField(default='', null=True, blank=True)
-    service2 = models.TextField(default='', null=True, blank=True)
-    service3 = models.TextField(default='', null=True, blank=True)
-
     innovation1 = models.TextField(default='', null=True, blank=True)
     innovation2 = models.TextField(default='', null=True, blank=True)
     innovation3 = models.TextField(default='', null=True, blank=True)
