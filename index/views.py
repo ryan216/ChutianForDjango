@@ -37,7 +37,7 @@ def get_about(request):
 def get_service(request):
     if request.GET:
         pk= request.GET['pk']
-        service_res= news.objects.get(pk=pk)
+        service_res= service.objects.get(pk=pk)
         dic = {"service": service_res}
         return render(request, 'web/service_detail.html', dic)
 

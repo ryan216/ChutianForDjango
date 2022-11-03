@@ -156,12 +156,12 @@
             <div class="container">
                 <h1 class="title">企业简介</h1>
                 <div class="about-us text">
-                    <p>企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介</p>
+                    <p>{{ about.introduction }}</p>
                 </div>
                 <div class="us">
                     <div class="text">
                         <div class="up clearfix">
-							<div class="num">50</div>
+							<div class="num">{{ about.nums_1 }}</div>
 							<div class="unit">项</div>
                         </div>
                         <div class="zh">国家专利</div>
@@ -169,7 +169,7 @@
                     </div>
                     <div class="text">
                         <div class="up clearfix">
-							<div class="num">10</div>
+							<div class="num">{{ about.nums_2 }}</div>
 							<div class="unit">年</div>
                         </div>
                         <div class="zh">技术沉淀</div>
@@ -177,7 +177,7 @@
                     </div>
                     <div class="text">
                         <div class="up clearfix">
-							<div class="num">10</div>
+							<div class="num">{{ about.nums_3 }}</div>
 							<div class="unit">年</div>
                         </div>
                         <div class="zh">运营经验</div>
@@ -185,7 +185,7 @@
                     </div>
                     <div class="text">
                         <div class="up clearfix">
-							<div class="num">90</div>
+							<div class="num">{{ about.nums_4 }}</div>
 							<div class="unit">人</div>
                         </div>
                         <div class="zh">研发团队</div>
@@ -198,41 +198,41 @@
 		    <div class="container">
 		        <h1 class="title">发展历程</h1>
 		        <div class="about-us text">
-		            <p>发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程发展历程</p>
+		            <p>{{ about.progress }}</p>
 		        </div>
 		        <div class="us">
 		            <div class="text">
-		                <div class="up clearfix">
-							<div class="num">50</div>
+                        <div class="up clearfix">
+							<div class="num">{{ about.nums_1 }}</div>
 							<div class="unit">项</div>
-		                </div>
-		                <div class="zh">国家专利</div>
-		                <div class="en">NATIONAL PATENT</div>
-		            </div>
-		            <div class="text">
-		                <div class="up clearfix">
-							<div class="num">10</div>
+                        </div>
+                        <div class="zh">国家专利</div>
+                        <div class="en">NATIONAL PATENT</div>
+                    </div>
+                    <div class="text">
+                        <div class="up clearfix">
+							<div class="num">{{ about.nums_2 }}</div>
 							<div class="unit">年</div>
-		                </div>
-		                <div class="zh">技术沉淀</div>
-		                <div class="en">SEDIMENT</div>
-		            </div>
-		            <div class="text">
-		                <div class="up clearfix">
-							<div class="num">10</div>
+                        </div>
+                        <div class="zh">技术沉淀</div>
+                        <div class="en">SEDIMENT</div>
+                    </div>
+                    <div class="text">
+                        <div class="up clearfix">
+							<div class="num">{{ about.nums_3 }}</div>
 							<div class="unit">年</div>
-		                </div>
-		                <div class="zh">运营经验</div>
-		                <div class="en">EXPERIENCE</div>
-		            </div>
-		            <div class="text">
-		                <div class="up clearfix">
-							<div class="num">90</div>
+                        </div>
+                        <div class="zh">运营经验</div>
+                        <div class="en">EXPERIENCE</div>
+                    </div>
+                    <div class="text">
+                        <div class="up clearfix">
+							<div class="num">{{ about.nums_4 }}</div>
 							<div class="unit">人</div>
-		                </div>
-		                <div class="zh">研发团队</div>
-		                <div class="en">TEAM</div>
-		            </div>
+                        </div>
+                        <div class="zh">研发团队</div>
+                        <div class="en">TEAM</div>
+                    </div>
 		        </div>
 		    </div>
 		</div>
@@ -246,10 +246,10 @@
                         </div>
                         <div class="introduction">
 							<div class="subtitle">
-								<h2>部门1</h2>
+								<h2>{{ about.d1_name }}</h2>
 							</div>
 							<div class="text">
-								<p>部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介</p>
+								<p>{{ about.d1_content }}</p>
 							</div>
 							<div class="learn-more">
 								<a href="">了解更多»</a>
@@ -262,10 +262,10 @@
                         </div>
                         <div class="introduction">
 							<div class="subtitle">
-								<h2>部门2</h2>
+								<h2>{{ about.d2_name }}</h2>
 							</div>
 							<div class="text">
-								<p>部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介</p>
+								<p>{{ about.d2_content }}</p>
 							</div>
 							<div class="learn-more">
 								<a href="">了解更多»</a>
@@ -278,10 +278,10 @@
                         </div>
                         <div class="introduction">
 							<div class="subtitle">
-								<h2>部门3</h2>
+								<h2>{{ about.d3_name }}</h2>
 							</div>
 							<div class="text">
-								<p>部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介</p>
+								<p>{{ about.d3_content }}</p>
 							</div>
 							<div class="learn-more">
 								<a href="">了解更多»</a>
@@ -294,10 +294,10 @@
                         </div>
                         <div class="introduction">
 							<div class="subtitle">
-								<h2>部门4</h2>
+								<h2>{{ about.d4_name }}</h2>
 							</div>
 							<div class="text">
-								<p>部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介部门简介</p>
+								<p>{{ about.d4_content }}</p>
 							</div>
 							<div class="learn-more">
 								<a href="">了解更多»</a>

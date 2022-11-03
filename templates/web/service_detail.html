@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/common.css' %}">
-    <link rel="stylesheet" href="{% static 'css/det.css' %}">
-    <title>楚天高速详细页公版</title>
+    <link rel="stylesheet" href="{% static 'css/service_detail.css' %}">
+    <title>业务经营详细页公版</title>
     <style>
         .nb .activity{
             background: #13387c;
@@ -137,19 +137,19 @@
         <div class="nb clearfix">
             <div class="bar clearfix">
                 <ul>
-                    <li class="{% if new.type == '1' %}activity{% endif %}"><a href="">企业新闻</a></li>
-                    <li class="{% if new.type == '2' %}activity{% endif %}"><a href="">行业会议</a></li>
-                    <li class="{% if new.type == '3' %}activity{% endif %}"><a href="">媒体聚焦</a></li>
+                    <li class="{% if service.type == '1' %}activity{% endif %}"><a href="">系统集成</a></li>
+                    <li class="{% if service.type == '2' %}activity{% endif %}"><a href="">机电信息</a></li>
+                    <li class="{% if service.type == '3' %}activity{% endif %}"><a href="">产品信息</a></li>
+                    <li class="{% if service.type == '4' %}activity{% endif %}"><a href="">网络信息</a></li>
                 </ul>
             </div>
             <div class="article">
                 <div class="title">
-                    <h1>{{ new.title }}</h1>
-                    <p>{{ new.time }}</p>
+                    <h1>{{ service.title }}</h1>
                 </div>
-                <p>{{ new.content }}</p>
+                <p>{{ service.content }}</p>
                 <img src="{% static 'img/ipg2.jpg' %}" alt="">
-                <p>{{ new.content }}</p>
+                <p>{{ service.content }}</p>
             </div>
         </div>
     </div>

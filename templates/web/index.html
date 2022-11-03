@@ -156,12 +156,12 @@
             <div class="container">
                 <h1 class="title">关于我们</h1>
                 <div class="about-us text">
-                    <p>关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于们关于我们关于我们关于我们关于我们关于我们</p>
+                    <p>{{ page_index.0.about }}</p>
                 </div>
                 <div class="us">
                     <div class="text">
                         <div class="up clearfix">
-							<div class="num">50</div>
+							<div class="num">{{ page_index.0.nums_1 }}</div>
 							<div class="unit">项</div>
                         </div>
                         <div class="zh">国家专利</div>
@@ -169,7 +169,7 @@
                     </div>
                     <div class="text">
                         <div class="up clearfix">
-							<div class="num">10</div>
+							<div class="num">{{ page_index.0.nums_2 }}</div>
 							<div class="unit">年</div>
                         </div>
                         <div class="zh">技术沉淀</div>
@@ -177,7 +177,7 @@
                     </div>
                     <div class="text">
                         <div class="up clearfix">
-							<div class="num">10</div>
+							<div class="num">{{ page_index.0.nums_3 }}</div>
 							<div class="unit">年</div>
                         </div>
                         <div class="zh">运营经验</div>
@@ -185,7 +185,7 @@
                     </div>
                     <div class="text">
                         <div class="up clearfix">
-							<div class="num">90</div>
+							<div class="num">{{ page_index.0.nums_4 }}</div>
 							<div class="unit">人</div>
                         </div>
                         <div class="zh">研发团队</div>
@@ -198,70 +198,26 @@
             <div class="container clearfix">
                 <h1 class="title">服务体系</h1>
                 <div class="svc container">
-                    <div class="svc-img first">
-                        <div class="img ">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-                        </div>
-                        <div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>智慧交通智慧交通智慧交通智慧交通智慧交通智慧交通智慧交通智慧交通智慧交通智慧交通智慧交通</p>
-							</div>
-							<div class="learn-more">
-								<a href="">了解更多»</a>
-							</div>
-                        </div> 
-                    </div>
-                    <div class="svc-img nd">
-                        <div class="img">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-                        </div>
-                        <div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, sit?</p>
-							</div>
-							<div class="learn-more">
-								<a href="">了解更多»</a>
-							</div>
-                        </div>
-                    </div>
-                    <div class="svc-img ra">
-                        <div class="img">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-                        </div>
-                        <div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, sit?</p>
-							</div>
-							<div class="learn-more">
-								<a href="">了解更多»</a>
-							</div>
-                        </div>
-                    </div>
-                    <div class="svc-img last">
-                        <div class="img">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-                        </div>
-                        <div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, sit?</p>
-							</div>
-							<div class="learn-more">
-								<a href="">了解更多»</a>
-							</div>
-                        </div>
-                    </div>
+                    {% for service in services %}
+                        {% if forloop.counter <= 4 %}
+                            <div class="svc-img {% if forloop.counter == 1 %}first{% elif forloop.counter == 2 %}nd{% elif forloop.counter == 3 %}rd{% elif forloop.counter == 4 %}last{% endif %}">
+                                <div class="img ">
+                                    <img src="{% static 'img/homepage03.jpg' %}" alt="">
+                                </div>
+                                <div class="introduction">
+                                    <div class="subtitle">
+                                        <h2>{{ servive.title }}</h2>
+                                    </div>
+                                    <div class="text">
+                                        <p>{{ service.header }}</p>
+                                    </div>
+                                    <div class="learn-more">
+                                        <a href="">了解更多»</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
