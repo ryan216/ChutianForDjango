@@ -82,17 +82,17 @@
 						<div class="submenu">
 							<ul>
 								<li class="none"></li>
-								<li>
-									<a href="" onclick="">系统集成</a>
+								<li onclick="changeStyle(document.getElementById('one'))">
+									系统集成
 								</li>
-								<li>
-									<a href="" onclick="">机电养护</a>
+								<li onclick="changeStyle(document.getElementById('two'))">
+									机电养护
 								</li>
-								<li>
-									<a href="" onclick="">产品信息</a>
+								<li onclick="changeStyle(document.getElementById('three'))">
+									产品信息
 								</li>
-								<li>
-									<a href="" onclick="">网络信息</a>
+								<li onclick="changeStyle(document.getElementById('four'))">
+									网络信息
 								</li>
 							</ul>
 						</div>
@@ -140,151 +140,28 @@
                     <li id="four" onclick="changeStyle(this)"><a href=""></a>网络信息</li>
                 </ul>
             </div>
-            <div class="bus-container">
-                <div class="bus-img">
-                    <a href="">
-                        <div class="img ">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-						</div>
-						<div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet Itaque, sit?</p>
-							</div>
-							<div class="learn-more"><a href="">了解更多»</a></div>
-						</div>
-                    </a>                        
-                </div>
-                <div class="bus-img">
-                    <a href="">
-                        <div class="img ">
-                			<img src="{% static 'img/homepage03.jpg' %}" alt="">
-                		</div>
-                		<div class="introduction">
-                			<div class="subtitle">
-                				<h2>智慧交通</h2>
-                			</div>
-                			<div class="text">
-                				<p>Lorem ipsum, dolor sit amet Itaque, sit?</p>
-                			</div>
-                			<div class="learn-more"><a href="">了解更多»</a></div>
-                		</div>
-                    </a>                        
-                </div>
-				<div class="bus-img">
-				    <a href="">
-				        <div class="img ">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-						</div>
-						<div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet Itaque, sit?</p>
-							</div>
-							<div class="learn-more"><a href="">了解更多»</a></div>
-						</div>
-				    </a>                        
-				</div>
-				<div class="bus-img">
-				    <a href="">
-				        <div class="img ">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-						</div>
-						<div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet Itaque, sit?</p>
-							</div>
-							<div class="learn-more"><a href="">了解更多»</a></div>
-						</div>
-				    </a>                        
-				</div>
-                <div class="bus-img five">
-                    <a href="">
-                        <div class="img ">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-						</div>
-						<div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet Itaque, sit?</p>
-							</div>
-							<div class="learn-more"><a href="">了解更多»</a></div>
-						</div>
-                    </a>
-                </div>
-                <div class="bus-img">
-                    <a href="">
-                        <div class="img ">
-                			<img src="{% static 'img/homepage03.jpg' %}" alt="">
-                		</div>
-                		<div class="introduction">
-                			<div class="subtitle">
-                				<h2>智慧交通</h2>
-                			</div>
-                			<div class="text">
-                				<p>Lorem ipsum, dolor sit amet Itaque, sit?</p>
-                			</div>
-                			<div class="learn-more"><a href="">了解更多»</a></div>
-                		</div>
-                    </a>                        
-                </div>
-				<div class="bus-img">
-				    <a href="">
-				        <div class="img ">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-						</div>
-						<div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet Itaque, sit?</p>
-							</div>
-							<div class="learn-more"><a href="">了解更多»</a></div>
-						</div>
-				    </a>                        
-				</div>
-				<div class="bus-img">
-				    <a href="">
-				        <div class="img ">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-						</div>
-						<div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet Itaque, sit?</p>
-							</div>
-							<div class="learn-more"><a href="">了解更多»</a></div>
-						</div>
-				    </a>                        
-				</div>
-				<div class="bus-img">
-				    <a href="">
-				        <div class="img ">
-							<img src="{% static 'img/homepage03.jpg' %}" alt="">
-						</div>
-						<div class="introduction">
-							<div class="subtitle">
-								<h2>智慧交通</h2>
-							</div>
-							<div class="text">
-								<p>Lorem ipsum, dolor sit amet Itaque, sit?</p>
-							</div>
-							<div class="learn-more"><a href="">了解更多»</a></div>
-						</div>
-				    </a>                        
-				</div>
+            <div class="bus-container" id="system">
+                {% for service in services %}
+                    {% if service.type == '1' %}
+                        <div class="bus-img {% if forloop.counter|divisibleby:5 == 0 %}five{% endif %}">
+                            <a href="/service?pk={{ service.pk }}">
+                                <div class="img ">
+                                    <img src="{% static 'img/homepage03.jpg' %}" alt="">
+                                </div>
+                                <div class="introduction">
+                                    <div class="subtitle">
+                                        <h2>{{ service.title }}</h2>
+                                    </div>
+                                    <div class="text">
+                                        <p>{{ service.header }}</p>
+                                    </div>
+                                    <div class="learn-more"><a href="">了解更多»</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <!--
                 <div class="bus-img five">
                     <a href="">
                         <div class="img ">
@@ -381,6 +258,73 @@
 						</div>
                     </a>
                 </div>
+                -->
+            </div>
+            <div class="bus-container" id="machine" style="display: none">
+                {% for service in services %}
+                    {% if service.type == '2' %}
+                        <div class="bus-img {% if forloop.counter|divisibleby:5 == 0 %}five{% endif %}">
+                            <a href="/service?pk={{ service.pk }}">
+                                <div class="img ">
+                                    <img src="{% static 'img/homepage03.jpg' %}" alt="">
+                                </div>
+                                <div class="introduction">
+                                    <div class="subtitle">
+                                        <h2>{{ service.title }}</h2>
+                                    </div>
+                                    <div class="text">
+                                        <p>{{ service.header }}</p>
+                                    </div>
+                                    <div class="learn-more"><a href="">了解更多»</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="bus-container" id="product" style="display: none">
+                {% for service in services %}
+                    {% if service.type == '3' %}
+                        <div class="bus-img {% if forloop.counter|divisibleby:5 == 0 %}five{% endif %}">
+                            <a href="/service?pk={{ service.pk }}">
+                                <div class="img ">
+                                    <img src="{% static 'img/homepage03.jpg' %}" alt="">
+                                </div>
+                                <div class="introduction">
+                                    <div class="subtitle">
+                                        <h2>{{ service.title }}</h2>
+                                    </div>
+                                    <div class="text">
+                                        <p>{{ service.header }}</p>
+                                    </div>
+                                    <div class="learn-more"><a href="">了解更多»</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="bus-container" id="network" style="display: none">
+                {% for service in services %}
+                    {% if service.type == '4' %}
+                        <div class="bus-img {% if forloop.counter|divisibleby:5 == 0 %}five{% endif %}">
+                            <a href="/service?pk={{ service.pk }}">
+                                <div class="img ">
+                                    <img src="{% static 'img/homepage03.jpg' %}" alt="">
+                                </div>
+                                <div class="introduction">
+                                    <div class="subtitle">
+                                        <h2>{{ service.title }}</h2>
+                                    </div>
+                                    <div class="text">
+                                        <p>{{ service.header }}</p>
+                                    </div>
+                                    <div class="learn-more"><a href="">了解更多»</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
         <div>
@@ -454,11 +398,36 @@
 		var two = document.getElementById("two");
 		var three = document.getElementById("three");
 		var four = document.getElementById("four");
+		var system = document.getElementById("system");
+		var machine = document.getElementById("machine");
+		var product = document.getElementById("product");
+		var network = document.getElementById("network");
 		one.className="sp ";
 		two.className="sp ";
 		three.className="sp ";
 		four.className="";
 		e.className += "activity";
+		if (e.id == "one"){
+		    system.style.display = "";
+		    machine.style.display = "none";
+		    product.style.display = "none";
+		    network.style.display = "none";
+        }else if (e.id == "two"){
+		    system.style.display = "none";
+		    machine.style.display = "";
+		    product.style.display = "none";
+		    network.style.display = "none";
+        }else if (e.id == "three"){
+		    system.style.display = "none";
+		    machine.style.display = "none";
+		    product.style.display = "";
+		    network.style.display = "none";
+        }else {
+		    system.style.display = "none";
+		    machine.style.display = "none";
+		    product.style.display = "none";
+		    network.style.display = "";
+        }
 	}
 </script>
 </html>

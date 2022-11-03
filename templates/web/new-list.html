@@ -64,14 +64,14 @@
                 <div class="submenu">
                     <ul>
                         <li class="none"></li>
-                        <li>
-                            <a href="" onclick="">企业新闻</a>
+                        <li onclick="changeStyle(document.getElementById('one'))">
+                            企业新闻
                         </li>
-						<li>
-							<a href="" onclick="">行业会议</a>
+						<li onclick="changeStyle(document.getElementById('two'))">
+							行业会议
 						</li>
-                        <li>
-                            <a href="" onclick="">媒体聚焦</a>
+                        <li onclick="changeStyle(document.getElementById('three'))">
+                            媒体聚焦
                         </li>
                     </ul>
                 </div>
@@ -124,10 +124,9 @@
     </header>
 
 	<div class="banner">
-				<div class="img">
-					<img src="{% static 'img/ipg01.jpg' %}" alt="">
-				</div>
-
+        <div class="img">
+            <img src="{% static 'img/ipg01.jpg' %}" alt="">
+        </div>
 	</div>
 
 	<div class="container">
@@ -140,30 +139,82 @@
 				</ul>
 			</div>
 		
-			<div class="list clearfix">
+			<div class="list clearfix"  id="company">
                 {% for new in news %}
-				<div class="news-page clearfix">
-					<a href="">
-                        <div class="left">
-                            <img src="{% static 'img/homepage03.jpg' %}" alt="">
-                        </div>
-                        <div class="right" id="right">
-                            <div class="time">
-                                <div class="date">
-                                    <div class="day">05-26</div>
-                                    <div class="year">{{ new.time }}</div>
+                    {% if new.type == '1' %}
+                        <div class="news-page clearfix">
+                            <a href="/news?pk={{ new.pk }}">
+                                <div class="left">
+                                    <img src="{% static 'img/homepage03.jpg' %}" alt="">
                                 </div>
-                                <div class="arrow">></div>
-                            </div>
+                                <div class="right" id="right">
+                                    <div class="time">
+                                        <div class="date">
+                                            <div class="year">{{ new.time }}</div>
+                                        </div>
+                                        <div class="arrow">></div>
+                                    </div>
+                                </div>
+                                <div class="main">
+                                    <h4 class="news-title">{{ new.title }}</h4>
+                                    <p>{{ new.header }}</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="main">
-                            <h4 class="news-title">{{ new.title }}</h4>
-                            <p>{{ new.header }}</p>
-                        </div>
-				    </a>
-				</div>
+                    {% endif %}
                 {% endfor %}
 			</div>
+            <div class="list clearfix"  id="industry" style="display: none">
+                {% for new in news %}
+                    {% if new.type == '2' %}
+                        <div class="news-page clearfix">
+                            <a href="/news?pk={{ new.pk }}">
+                                <div class="left">
+                                    <img src="{% static 'img/homepage03.jpg' %}" alt="">
+                                </div>
+                                <div class="right" id="right">
+                                    <div class="time">
+                                        <div class="date">
+                                            <div class="year">{{ new.time }}</div>
+                                        </div>
+                                        <div class="arrow">></div>
+                                    </div>
+                                </div>
+                                <div class="main">
+                                    <h4 class="news-title">{{ new.title }}</h4>
+                                    <p>{{ new.header }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="list clearfix"  id="meet" style="display: none">
+                {% for new in news %}
+                    {% if new.type == '3' %}
+                        <div class="news-page clearfix">
+                            <a href="/news?pk={{ new.pk }}">
+                                <div class="left">
+                                    <img src="{% static 'img/homepage03.jpg' %}" alt="">
+                                </div>
+                                <div class="right" id="right">
+                                    <div class="time">
+                                        <div class="date">
+                                            <div class="year">{{ new.time }}</div>
+                                        </div>
+                                        <div class="arrow">></div>
+                                    </div>
+                                </div>
+                                <div class="main">
+                                    <h4 class="news-title">{{ new.title }}</h4>
+                                    <p>{{ new.header }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
 		</div>
 		<div>
 			<div class="list-page">
@@ -235,10 +286,26 @@
 		var one = document.getElementById("one");
 		var two = document.getElementById("two");
 		var three = document.getElementById("three");
+		var company = document.getElementById("company");
+		var industry = document.getElementById("industry");
+		var meet = document.getElementById("meet");
 		one.className="one ";
 		two.className="two ";
 		three.className="";
 		e.className += "activity";
+		if (e.id == "one"){
+		    company.style.display = "";
+		    industry.style.display = "none";
+		    meet.style.display = "none";
+        }else if (e.id == "two"){
+		    company.style.display = "none";
+		    industry.style.display = "";
+		    meet.style.display = "none";
+        }else {
+		    company.style.display = "none";
+		    industry.style.display = "none";
+		    meet.style.display = "";
+        }
 	}
 </script>
 	

@@ -17,13 +17,13 @@
 /*图片结束*/
 /*文章开始*/
 .nb li{
-    display: block;
+    display: inline;
     text-align: center;
     height: 51px;
     float: left;
     overflow: hidden;
     line-height: 50px;
-    width: 400px;
+    width: 300px;
     background: #efefef;
     box-sizing: border-box;
     border: 1px solid;
@@ -41,6 +41,7 @@
 }
 
 .nb .bar{
+    margin-bottom: 21px;
     margin-top: 39px;
 }
 .nb .article .title{
