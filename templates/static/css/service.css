@@ -26,6 +26,10 @@
     color: #ffffff;
     transition: 0.5s;
 }
+.bus-list .activity{
+	background: #13387c;
+	color: #ffffff;
+}
 .bus-list .bar{
     margin-bottom: 21px;
     margin-top: 39px;
